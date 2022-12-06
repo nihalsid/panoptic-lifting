@@ -270,7 +270,7 @@
                 </div>
             </div>
             <div class="container">
-                <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1" min="0" max="419" value="100" type="range"/>
+                <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1" min="0" max="419" value="253" type="range"/>
             </div>
             <div class="container">
                 <div style="text-align: center;">Use the slider to move across a novel view trajectory along the scene. For a selected viewpoint along the trajectory, the nearest input frames and their machine generated panoptics are shown on the left. The optimized volumetric representation is shown as a mesh in the middle along with the viewpoint. Novel view panoptics obtained by our method are shown on the right. Press <b>R</b> to reset mesh view. </div>
@@ -631,33 +631,6 @@
             }
         }
 
-        let div_to_render_scene = {
-            "mesh_style_0": {
-                "0": null,
-                "1": null,
-                "2": null,
-                "geo": null,
-            },
-            "mesh_style_1": {
-                "0": null,
-                "1": null,
-                "2": null,
-                "geo": null,
-            },
-            "mesh_style_2": {
-                "0": null,
-                "1": null,
-                "2": null,
-                "geo": null,
-            },
-            "mesh_style_3": {
-                "0": null,
-                "1": null,
-                "2": null,
-                "geo": null,
-            },
-        }
-
         let mouse_button_down = false;
         let list_of_orbit_controls = []
         let style_camera = null;
@@ -670,11 +643,14 @@
             "mesh_instance": null,
             "mesh_semantics": null
         }
-        let start_idx = 125;
+        let start_idx = 253;
         let img_height = 192;
         let row_height_ours = 192 * 4;
         let row_height_nearest = 192 * 3;
         let col_width = 256;
+        let rotate_enable = true;
+        let rotate_count = 0;
+
 
         function setup_camera(div_name){
             let container = document.getElementById(div_name);
@@ -782,115 +758,41 @@
 
                 controls = new OrbitControls(camera, renderer.domElement)
                 controls.enableDamping = false
-
+                controls.autoRotate = true
+                controls.autoRotateSpeed = 0.35
                 // resize
 
                 window.addEventListener( 'resize', onWindowResize );
+            }
 
-        }
             function onWindowResize() {
                 let width = container.clientWidth;
                 let height = container.clientHeight;
                 camera.aspect = width / height;
-                camera.updateProjectionMatrix();
+                camera.rotation.z += 0.005;
                 renderer.setSize( width, height );
             }
+
             function animate() {
                 requestAnimationFrame( animate );
                 render();
+                rotate_count += 1
+                if (rotate_count == 500 && rotate_enable) {
+                    rotate_count = 0;
+                    controls.autoRotate = false
+                    controls.update();
+                    controls.autoRotate = true
+                    controls.autoRotateSpeed *= -1
+                }
+                if (!rotate_enable){
+                    rotate_count = 0;
+                    controls.autoRotate = false
+                    controls.update();
+                }
             }
 
             function render() {
                 renderer.render( div_to_scene[div_id][render_colors ? "color" : "geo"], camera );
-                controls.update();
-            }
-
-            return controls;
-        }
-
-        function create_style_render_div(camera, div_id, mesh_path) {
-            let container;
-            let renderer, controls;
-
-            init();
-            animate();
-
-            function init() {
-
-                container = document.getElementById(div_id);
-                let width = container.parentElement.clientWidth;
-                let height = container.parentElement.clientHeight;
-
-
-                div_to_render_scene[div_id]["0"] = new THREE.Scene();
-                div_to_render_scene[div_id]["1"] = new THREE.Scene();
-                div_to_render_scene[div_id]["2"] = new THREE.Scene();
-                div_to_render_scene[div_id]["0"].background = new THREE.Color( 0xffffff );
-                div_to_render_scene[div_id]["1"].background = new THREE.Color( 0xffffff );
-                div_to_render_scene[div_id]["2"].background = new THREE.Color( 0xffffff );
-                div_to_render_scene[div_id]["geo"] = new THREE.Scene();
-                div_to_render_scene[div_id]["geo"].background = new THREE.Color( 0xffffff );
-
-                // PLY file
-
-                const loader = new PLYLoader();
-                ["0", "1", "2"].forEach(id => {
-                    loader.load( mesh_path + id + ".ply", function ( geometry ) {
-                        geometry.computeVertexNormals();
-                        let material = new THREE.MeshBasicMaterial( { color: 0xffffff, vertexColors: THREE.VertexColors} );
-                        const mesh_color = new THREE.Mesh( geometry, material );
-                        div_to_render_scene[div_id][id].add( mesh_color );
-                        if (id === "0") {
-                            let material_geo = new THREE.MeshStandardMaterial( { color: 0x444444, flatShading: true } )
-                            const mesh_geo = new THREE.Mesh( geometry, material_geo );
-                            div_to_render_scene[div_id]["geo"].add( mesh_geo );
-                        }
-                    }, (xhr) => {
-                        console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
-                    }, (error) => {
-                        console.log(error)
-                    }
-                    );
-                })
-
-                div_to_render_scene[div_id]["geo"].add( new THREE.HemisphereLight( 0x333333, 0x222222 ) );
-                addShadowedLight(div_to_render_scene[div_id]["geo"], 1, 1, 1, 0xffffff, 1.35 );
-                addShadowedLight(div_to_render_scene[div_id]["geo"],  0.5, 1, - 1, 0xffffff, 1 );
-
-                // renderer
-
-                renderer = new THREE.WebGLRenderer( { antialias: true } );
-                renderer.setPixelRatio( window.devicePixelRatio );
-                renderer.setSize( width, height);
-                renderer.outputEncoding = THREE.sRGBEncoding;
-
-                renderer.shadowMap.enabled = true;
-
-                container.appendChild( renderer.domElement );
-
-                controls = new OrbitControls(camera, renderer.domElement)
-                controls.enableDamping = false
-
-                // resize
-
-                window.addEventListener( 'resize', onWindowResize );
-
-        }
-            function onWindowResize() {
-                let width = container.clientWidth;
-                let height = container.clientHeight;
-                camera.aspect = width / height;
-                camera.updateProjectionMatrix();
-                renderer.setSize( width, height );
-            }
-            function animate() {
-                requestAnimationFrame( animate );
-                render();
-            }
-
-            function render() {
-                let scene = render_colors ? div_to_render_scene[div_id][style_id]: div_to_render_scene[div_id]["geo"]
-                renderer.render( scene, camera );
                 controls.update();
             }
 
@@ -969,6 +871,7 @@
             });
             
             document.getElementById('interpolation-slider').addEventListener('input', function(event){
+                rotate_enable = false;
                 ["mesh_color", "mesh_semantics", "mesh_instance"].forEach(div_id => {
                     let value = parseInt(event.target.value);
                     camera_mesh[div_id].setRotationFromEuler(new THREE.Euler(0, 0, 0, 'XYZ'))
