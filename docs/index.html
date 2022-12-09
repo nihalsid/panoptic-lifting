@@ -59,7 +59,16 @@
             justify-content: center; 
             display: flex;
         }
+        .glowing-border {
+            border: 2px solid #dadada;
+            border-radius: 7px;
+        }
 
+        .glowing-border:focus {
+            outline: none;
+            border-color: #1f191a;
+            box-shadow: 0 0 10px #1f191a;
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -105,7 +114,7 @@
                             <span class="author-block"><sup>2</sup>Meta Reality Labs</span>
                         </div>
                         <div class="is-size-6 publication-authors">
-                            (Work was partly done during Yawar’s and Norman’s internships at Meta Reality Labs Zurich)
+                            (Work was done during Yawar’s and Norman’s internships at Meta Reality Labs Zurich as well as at TUM)
                         </div>
 
                         <div class="column has-text-centered">
@@ -147,15 +156,15 @@
                                 </span>
 
 
-<!--                                &lt;!&ndash; Github Link. &ndash;&gt;-->
-<!--                                <span class="link-block">-->
-<!--                                    <a class="external-link button is-normal is-rounded is-dark">-->
-<!--                                        <span class="icon">-->
-<!--                                            <i class="fab fa-github"></i>-->
-<!--                                        </span>-->
-<!--                                        <span>Code (coming soon)</span>-->
-<!--                                    </a>-->
-<!--                                </span>-->
+                                <!-- Github Link. -->
+                                <span class="link-block">
+                                    <a class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code (coming soon)</span>
+                                    </a>
+                                </span>
                                 <!-- Dataset Link. -->
                                 <span class="link-block"></span>
                             </div>
@@ -185,7 +194,7 @@
                     </div>
                 </div>
                 <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
-                    Given only RGB images of an in-the-wild scene as input, <span class="dnerf">Panoptic Lifting</span> optimizes a panoptic radiance field which can be queried for color, depth, semantics, and instances for any point in space. Our method lifts noisy and view-inconsistent machine generated 2D segmentation masks into a consistent 3D panoptic radiance field. Once trained, our model is able to render images and their corresponding panoptic segmentation masks from both existing and novel viewpoints.
+                    Given only RGB images of an in-the-wild scene as input, <span class="dnerf">Panoptic Lifting</span> optimizes a panoptic radiance field which can be queried for color, depth, semantics, and instances for any point in space. Our method lifts noisy and view-inconsistent machine generated 2D segmentation masks into a consistent 3D panoptic radiance field, without requiring further tracking supervision or 3D bounding boxes.
                 </h2>
             </div>
         </div>
@@ -307,7 +316,7 @@
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Video</h2>
                     <div class="publication-video">
-                    <iframe src="https://www.youtube.com/embed/M5OU_fiD3Jk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://youtube.com/embed/W11gYesktrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -424,10 +433,10 @@
                     <div class="columns is-centered">
                         <div class="column is-4">
                             <div class="buttons is-centered" style="height: 100%">
-                              <button class="button" id="button_0" style="background-color: #a0a0b5; color: #ffffff; width: 100%">Ours (complete)</button>
-                              <button class="button" id="button_1" style="background-color: #a0a0b5; color: #ffffff; width: 100%">Ours w/o Segment Consistency</button>
-                              <button class="button" id="button_2" style="background-color: #a0a0b5; color: #ffffff; width: 100%">Ours w/o Probability Field</button>
-                              <button class="button" id="button_3" style="background-color: #a0a0b5; color: #ffffff; width: 100%">Ours w/o Gradient Blocking</button>
+                              <button class="button glowing-border" id="button_0" style="background-color: #a0a0b5; color: #ffffff; width: 100%">Ours (complete)</button>
+                              <button class="button glowing-border" id="button_1" style="background-color: #a0a0b5; color: #ffffff; width: 100%">Ours w/o Segment Consistency</button>
+                              <button class="button glowing-border" id="button_2" style="background-color: #a0a0b5; color: #ffffff; width: 100%">Ours w/o Probability Field</button>
+                              <button class="button glowing-border" id="button_3" style="background-color: #a0a0b5; color: #ffffff; width: 100%">Ours w/o Gradient Blocking</button>
                             </div>
                         </div>
 
@@ -923,7 +932,7 @@
             }
 
             set_ablation_state(0)
-
+            document.getElementById("button_0").focus();
             document.getElementById('button_0').addEventListener('click', function(event){
                 set_ablation_state(0)
             })
