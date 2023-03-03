@@ -1,0 +1,133 @@
+person,16
+bicycle,-1
+car,-1
+motorcycle,-1
+airplane,-1
+bus,-1
+train,-1
+truck,-1
+boat,-1
+traffic light,-1
+fire hydrant,-1
+stop sign,-1
+parking meter,-1
+bench,21
+bird,-1
+cat,-1
+dog,-1
+horse,-1
+sheep,-1
+cow,-1
+elephant,-1
+bear,-1
+zebra,-1
+giraffe,-1
+backpack,20
+umbrella,21
+handbag,20
+tie,21
+suitcase,21
+frisbee,21
+skis,21
+snowboard,21
+sports ball,21
+kite,21
+baseball bat,21
+baseball glove,21
+skateboard,21
+surfboard,21
+tennis racket,21
+bottle,21
+wine glass,21
+cup,21
+fork,21
+knife,21
+spoon,21
+bowl,21
+banana,21
+apple,21
+sandwich,21
+orange,21
+broccoli,21
+carrot,21
+hot dog,21
+pizza,21
+donut,21
+cake,21
+chair,5
+couch,6
+potted plant,-1
+bed,4
+dining table,7
+toilet,17
+tv,15
+laptop,21
+mouse,21
+remote,21
+keyboard,21
+cell phone,21
+microwave,21
+oven,21
+toaster,21
+sink,18
+refrigerator,14
+book,21
+clock,21
+vase,21
+scissors,21
+teddy bear,21
+hair drier,21
+toothbrush,21
+banner,-1
+blanket,21
+bridge,-1
+cardboard,21
+counter,10
+curtain,12
+door-stuff,8
+floor-wood,2
+flower,21
+fruit,21
+gravel,2
+house,21
+light,19
+mirror-stuff,21
+net,21
+pillow,21
+platform,2
+playingfield,2
+railroad,2
+river,-1
+road,2
+roof,21
+sand,2
+sea,-1
+shelf,11
+snow,2
+stairs,21
+tent,21
+towel,21
+wall-brick,1
+wall-stone,1
+wall-tile,1
+wall-wood,1
+water-other,-1
+window-blind,9
+window-other,9
+tree-merged,21
+fence-merged,21
+ceiling-merged,13
+sky-other-merged,-1
+cabinet-merged,3
+table-merged,7
+floor-other-merged,2
+pavement-merged,2
+mountain-merged,-1
+grass-merged,21
+dirt-merged,2
+paper-merged,21
+food-other-merged,21
+building-other-merged,21
+rock-merged,-1
+wall-other-merged,1
+rug-merged,2

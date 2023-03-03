@@ -1,0 +1,73 @@
+experiment: fast_dev
+seed: null
+save_epoch: 1
+sanity_steps: -1
+max_epoch: 10
+val_check_percent: 1.0
+val_check_interval: 0.25
+resume: null
+subsample_frames: 1
+
+segment_grouping_mode: argmax_conf
+semantic_weight_mode: softmax
+late_semantic_optimization: 0
+use_symmetric_ce: False
+probabilistic_ce_mode: "TTAConf"
+use_feature_regularization: False
+lambda_feat: 0.04
+ce_alpha: 0.85
+ce_beta: 0.15
+lr: 5e-4
+lambda_segment: 1.2
+lambda_semantics: 0.1
+lambda_instances: 0.1
+lambda_rgb: 1
+lambda_dist_reg: 0.005
+weight_class_0: 0
+weight_decay: 1e-8
+stop_semantic_grad: True
+use_mlp_for_semantics: True
+decay_step: [9, 10]
+decay_gamma: 0.5
+warmup_epochs: 0
+warmup_multiplier: 1.0
+batch_size: 2048
+max_rays_instances: 1024
+max_rays_segments: 1024
+batch_size_contrastive: 1
+batch_size_segments: 32
+max_instances: 25
+chunk: 2048
+chunk_segment: 16384
+num_workers: 8
+logger: wandb
+overfit: False
+min_grid_dim: 128
+max_grid_dim: 192
+
+lambda_tv_density: 0.1
+lambda_tv_semantics: 0.02
+lambda_tv_appearance: 0.01
+bbox_aabb_reset_epochs: [1,2,3]
+grid_upscale_epochs: [1,2,3,4]
+instance_optimization_epoch: 3
+segment_optimization_epoch: 6
+
+perturb: 1.0
+noise_std: 1.0
+decay_noise: 20000
+max_depth: 5
+reweight_fg: False
+
+dataset_class: "panopli"
+dataset_root: "data/itw/office_0213meeting/"
+image_dim: 512
+visualized_indices: null
+
+wandb_main: False # set to true to log to main board rather than debug board
+suffix: ''
+
+hydra:
+  output_subdir: null # Disable saving of config files. We'll do that ourselves.
+  run:
+    dir: .

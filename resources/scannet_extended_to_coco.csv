@@ -1,0 +1,31 @@
+wall,wall/wall-brick,wall/wall-stone,wall/wall-tile,wall/wall-wood,wall/wall-other-merged
+floor,floor/floor-wood,ground/gravel,ground/platform,ground/playingfield,ground/railroad,ground/road,ground/sand,ground/snow,floor/floor-other-merged,ground/pavement-merged,ground/dirt-merged,textile/rug-merged
+cabinet,furniture-stuff/cabinet-merged
+bed,furniture/bed
+chair,furniture/chair
+sofa,furniture/couch
+table,furniture/dining table,furniture-stuff/table-merged
+door,furniture-stuff/door-stuff
+window,window/window-blind,window/window-other
+counter,furniture-stuff/counter
+shelves,furniture-stuff/shelf
+curtain,textile/curtain
+ceiling,ceiling/ceiling-merged
+refridgerator,appliance/refrigerator
+television,electronic/tv
+person,person/person
+toilet,furniture/toilet
+sink,appliance/sink
+lamp,furniture-stuff/light
+bag,accessory/backpack,accessory/handbag
+bottle,kitchen/bottle
+cup,kitchen/cup
+keyboard,electronic/keyboard
+mouse,electronic/mouse
+book,indoor/book
+laptop,electronic/laptop
+blanket,textile/blanket
+pillow,textile/pillow
+clock,indoor/clock
+cellphone,electronic/cell phone
+otherprop,indoor/vase,indoor/scissors,indoor/teddy bear,indoor/hair drier,indoor/toothbrush,electronic/remote,appliance/microwave,appliance/oven,appliance/toaster,accessory/tie,accessory/suitcase,sports/frisbee,sports/skis,sports/snowboard,sports/sports ball,sports/kite,sports/baseball bat,sports/baseball glove,sports/skateboard,sports/surfboard,sports/tennis racket,kitchen/wine glass,kitchen/fork,kitchen/knife,kitchen/spoon,kitchen/bowl,food/banana,food/apple,food/sandwich,food/orange,food/broccoli,food/carrot,food/hot dog,food/pizza,food/donut,food/cake,accessory/umbrella,raw-material/cardboard,plant/flower,food-stuff/fruit,food-stuff/food-other-merged,furniture-stuff/mirror-stuff,raw-material/paper-merged,textile/towel,building/house,structural/net,building/roof,furniture-stuff/stairs,building/tent,plant/tree-merged,structural/fence-merged,plant/grass-merged,food-stuff/food-other-merged,building/building-other-merged,outdoor/bench

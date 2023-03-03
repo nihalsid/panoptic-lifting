@@ -1,0 +1,47 @@
+wall,wall/wall-brick,wall/wall-stone,wall/wall-tile,wall/wall-wood,wall/wall-other-merged
+floor,floor/floor-wood,ground/gravel,ground/platform,ground/playingfield,ground/railroad,ground/road,ground/sand,ground/snow,floor/floor-other-merged,ground/pavement-merged,ground/dirt-merged
+cabinet,furniture-stuff/cabinet-merged
+bed,furniture/bed
+chair,furniture/chair
+sofa,furniture/couch
+table,furniture/dining table,furniture-stuff/table-merged
+door,furniture-stuff/door-stuff
+window,window/window-blind,window/window-other
+bookshelf
+picture
+counter,furniture-stuff/counter
+blinds
+desk
+shelves,furniture-stuff/shelf
+curtain,textile/curtain
+dresser
+pillow,textile/pillow
+mirror,furniture-stuff/mirror-stuff
+floor mat,textile/rug-merged
+clothes
+ceiling,ceiling/ceiling-merged
+books,indoor/book
+refridgerator,appliance/refrigerator
+television,electronic/tv
+paper,raw-material/paper-merged
+towel,textile/towel
+shower curtain
+box
+whiteboard
+person,person/person
+nightstand
+toilet,furniture/toilet
+sink,appliance/sink
+lamp,furniture-stuff/light
+bathtub
+bag,accessory/backpack,accessory/handbag
+otherstructure,building/house,structural/net,building/roof,furniture-stuff/stairs,building/tent,plant/tree-merged,structural/fence-merged,plant/grass-merged,food-stuff/food-other-merged,building/building-other-merged
+otherfurniture,outdoor/bench
+otherprop,indoor/clock,indoor/vase,indoor/scissors,indoor/teddy bear,indoor/hair drier,indoor/toothbrush,electronic/laptop,electronic/mouse,electronic/remote,electronic/keyboard,electronic/cell phone,appliance/microwave,appliance/oven,appliance/toaster,accessory/tie,accessory/suitcase,sports/frisbee,sports/skis,sports/snowboard,sports/sports ball,sports/kite,sports/baseball bat,sports/baseball glove,sports/skateboard,sports/surfboard,sports/tennis racket,kitchen/bottle,kitchen/wine glass,kitchen/cup,kitchen/fork,kitchen/knife,kitchen/spoon,kitchen/bowl,food/banana,food/apple,food/sandwich,food/orange,food/broccoli,food/carrot,food/hot dog,food/pizza,food/donut,food/cake,accessory/umbrella,raw-material/cardboard,textile/blanket,plant/flower,food-stuff/fruit,food-stuff/food-other-merged
+
+
+
+
+
+
+

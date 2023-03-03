@@ -1,0 +1,31 @@
+vehicle,bicycle
+vehicle,car
+vehicle,motorcycle
+vehicle,airplane
+vehicle,bus
+vehicle,train
+vehicle,truck
+vehicle,boat
+outdoor,traffic light
+outdoor,fire hydrant
+outdoor,stop sign
+outdoor,parking meter
+animal,bird
+animal,cat
+animal,dog
+animal,horse
+animal,sheep
+animal,cow
+animal,elephant
+animal,bear
+animal,zebra
+animal,giraffe
+furniture,potted plant
+textile,banner
+building,bridge
+water,river
+water,sea
+water,water-other
+sky,sky-other-merged
+solid,mountain-merged
+solid,rock-merged
