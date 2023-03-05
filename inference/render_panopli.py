@@ -21,7 +21,7 @@ from util.misc import get_parameters_from_state_dict
 def render_panopli_checkpoint(config, trajectory_name, test_only=False):
     output_dir = (Path("runs") / f"{Path(config.dataset_root).stem}_{trajectory_name if not test_only else 'test'}_{Path(config.experiment)}")
     print(output_dir)
-    output_dir.mkdir(exist_ok=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
     device = torch.device("cuda:0")
     test_set = PanopLiDataset(Path(config.dataset_root), "test", (config.image_dim[0], config.image_dim[1]), config.max_depth, overfit=config.overfit, semantics_dir='m2f_semantics', instance_dir='m2f_instance',
                               instance_to_semantic_key='m2f_instance_to_semantic', create_seg_data_func=create_segmentation_data_panopli, subsample_frames=config.subsample_frames)
