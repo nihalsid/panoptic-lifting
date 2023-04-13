@@ -47,7 +47,7 @@ Overall code structure is as follows:
 
 ## Pre-trained Models and Data
 
-Download the pretrained models from [here](https://drive.google.com/file/d/1dvkfZ9beYVsxG_RftZ6aguHP6FLgjAC3/view?usp=sharing) and the corresponding processed scene data from [here](https://drive.google.com/file/d/1I6Y7IqSEmWl_T4CRUj-TmlUgejjexCa7/view?usp=sharing). Extract both zips in the project root directory, such that trained models are in `pretrained-examples/` directory and data is in `data/` directory. More [pretrained models](https://drive.google.com/file/d/1KsIq4MBIDIa08gREoRWePI0qXYJE_4HW/view?usp=sharing) and [data]() from ScanNet dataset are also provided.
+Download the pretrained models from [here](https://drive.google.com/file/d/1dvkfZ9beYVsxG_RftZ6aguHP6FLgjAC3/view?usp=sharing) and the corresponding processed scene data from [here](https://drive.google.com/file/d/1I6Y7IqSEmWl_T4CRUj-TmlUgejjexCa7/view?usp=sharing). Extract both zips in the project root directory, such that trained models are in `pretrained-examples/` directory and data is in `data/` directory. More [pretrained models](https://drive.google.com/file/d/1KsIq4MBIDIa08gREoRWePI0qXYJE_4HW/view?usp=sharing) and [data](https://drive.google.com/file/d/1ks0z8bJgaqDlEWFKQq-W6T6BS2UPj57F/view?usp=sharing) from ScanNet dataset are also provided.
 
 ### Running inference
 
