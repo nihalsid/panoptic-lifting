@@ -122,10 +122,12 @@ The majority of _Panoptic Lifting_ is licensed under CC-BY-NC, however portions 
 If you wish to cite us, please use the following BibTeX entry:
 
 ```BibTeX
-@misc{2212.09802,
-    Author = {Yawar Siddiqui and Lorenzo Porzi and Samuel Rota Buló and Norman Müller and Matthias Nießner and Angela Dai and Peter Kontschieder},
-    Title = {Panoptic Lifting for 3D Scene Understanding with Neural Fields},
-    Year = {2022},
-    Eprint = {arXiv:2212.09802},
+@InProceedings{Siddiqui_2023_CVPR,
+    author    = {Siddiqui, Yawar and Porzi, Lorenzo and Bul\`o, Samuel Rota and M\"uller, Norman and Nie{\ss}ner, Matthias and Dai, Angela and Kontschieder, Peter},
+    title     = {Panoptic Lifting for 3D Scene Understanding With Neural Fields},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {9043-9052}
 }
 ```
