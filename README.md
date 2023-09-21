@@ -1,4 +1,4 @@
-## Panoptic Lifting for 3D Scene Understanding (CVPR2023 Hightlight)
+## Panoptic Lifting for 3D Scene Understanding (CVPR2023 Highlight)
 
 <hr/>
 
